@@ -1,0 +1,18 @@
+1. Prompt the user to enter their name to log into the chat app.
+
+2. Once logged, have the client render the conversation board basic view via 'index.ejs'
+
+3. When the user enters their name, EMIT a 'new_user' event from the client to the Server.
+
+4. Have the server listen for a 'new_user' event. When the event is triggered implement the following:
+  a. Add the new user information to a log of existing logged in users.
+  b. Broadcast to all existing users and event 'user_logged_in', possibly adding a message for the conversation board?
+  c. EMIT and event back to the new logged in user called 'messages' to populate the new user's board with existing messages that have already been sent.
+
+5. Have the client listen for an even 'messages'. When the event is triggered, populate the view with existing conversations.
+
+6. When the user creates and sends a new message from the view, have the client EMIT an event 'new_message' to the server.
+
+7. Have the server listen for the 'new_message' event and broadcast the message contents to all connected clients.
+
+8. Update the views using JQuery with the new message contents.

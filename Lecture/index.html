@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ol id="fruit">
+      <li>Bananas</li>
+      <li>Oranges</li>
+      <li>Apples</li>
+    </ol>
+    <script type="text/javascript">
+      let new_fruit = document.createElement("li");
+      new_fruit.innerHTML = "Pears";
+      document.getElementById('fruit').appendChild(new_fruit);
+    </script>
+  </body>
+</html>

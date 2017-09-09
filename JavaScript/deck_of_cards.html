@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deck of Cards</title>
+    <style>
+      p{
+        font-size: 100px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cards"></div>
+    <script type="text/javascript">
+      function Deck(){
+        this.deck = []
+
+        //Build a new deck
+        this.build = function(){
+          for(var i=137; i<151; i++){
+            if(i===148){
+              continue
+            }
+            this.deck.push('&#127'+parseInt(i)+';');
+          }
+          for(var i=153; i<167; i++){
+            if(i===164){
+              continue
+            }
+            this.deck.push('&#127'+parseInt(i)+';');
+          }
+          for(var i=169; i<183; i++){
+            if(i===180){
+              continue
+            }
+            this.deck.push('&#127'+parseInt(i)+';');
+          }
+          for(var i=185; i<199; i++){
+            if(i===196){
+              continue
+            }
+            this.deck.push('&#127'+parseInt(i)+';');
+          }
+        }
+
+        //Reset the existing Deck to a new one.
+        this.reset = function(){
+          this.build();
+        }
+
+        //Shuffle the deck
+        this.shuffle = function(){
+          var m = this.deck.length, t, i;
+          while (m){
+            i = Math.floor(Math.random() * m--);
+            t = this.deck[m];
+            this.deck[m] = this.deck[i];
+            this.deck[i] = t;
+          }
+          return this;
+        }
+
+        //Deal a card
+        this.deal = function(){
+          var m = this.deck.length, t, i;
+          i = Math.floor(Math.random() * m)
+          t = this.deck[i];
+          this.deck.splice(i,1);
+          return t;
+        }
+      }
+
+      function Player(name){
+        var hand = [];
+        this.name = name;
+
+        //Take a new card and place it into the player's hand
+        this.takeACard = function(deck){
+          hand.push(deck.deal());
+          return this;
+        }
+
+        //Display the player's hand.
+        this.showHand = function(){
+          for(var i=0; i<hand.length; i++){
+            console.log(hand[i]);
+          }
+        }
+
+        //Discard the specified card from the player's hand.
+        this.discard = function(index){
+          hand.splice(index, 1);
+        }
+      }
+    </script>
+  </body>
+</html>

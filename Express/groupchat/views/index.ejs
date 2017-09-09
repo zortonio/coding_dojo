@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Group Chat</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src='/socket.io/socket.io.js'></script>
+    <script type="text/javascript">
+      let name = prompt('Your Name:')
+
+      $(document).ready(function(){
+        let socket = io.connect();
+
+        socket.emit('new_user', {name: name});
+
+        socket.on('new_user_logged_on', function(data){
+          $('#conversations').append('<p class="msg_log">'+data.name+' joined the conversation</p>');
+        });
+
+        socket.on('feed', function(data){
+          for (i in data.feed){
+            $('#conversations').append(data.feed[i]);
+          }
+        })
+
+        socket.on('user_logged_out', function(data){
+          $('#conversations').append('<p class="msg_log">'+data.name+' left the conversation</p>');
+        });
+
+        $('#message_form').submit(function(event){
+          socket.emit('new_message', {message: $(this).serializeArray()});
+          event.preventDefault();
+          $('#msg').val('');
+        });
+
+        socket.on('message', function(data){
+          $('#conversations').append('<p class="msg_log">'+data.name+': '+data.message+'</p>')
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Conversation Board</h1>
+    <div id="conversations"></div>
+    <form autocomplete="off" id="message_form">
+      <input type="text" name="message" placeholder="Enter your message here" id="msg">
+      <input type="submit" name="send" value="Send" id='sendBtn'>
+    </form>
+  </body>
+</html>

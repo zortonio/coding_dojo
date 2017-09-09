@@ -1,0 +1,16 @@
+form{
+  border: solid 1px black;
+  width: 600px;
+}
+h1{
+  margin: 10px;
+}
+.result{
+  margin: 10px;
+}
+.result h2, .result h3{
+  display: inline-block;
+}
+input{
+  margin: 10px;
+}

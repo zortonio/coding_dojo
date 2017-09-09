@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Basics II</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function magic_multiply(x, y){
+        if(typeof x === 'object' && typeof y === 'number'){
+          for(let i = 0; i < x.length; i++){
+            x[i] = x[i]*y
+          }
+          return x;
+        }else if(x === 0 && y === 0){
+          return "All inputs 0";
+        }else if(typeof x === 'number' && typeof y === 'string'){
+          return "Error: Cannot multiply by string."
+        }else if(typeof x === 'string' && typeof y === 'number'){
+          let result = "";
+          while (y > 0){
+            result = result + x;
+            y = y - 1;
+          }
+          return result
+        }else{
+          return x*y
+        }
+      }
+
+
+
+      let test1 = magic_multiply(2, 5);
+      console.log(test1);
+
+      let test2 = magic_multiply(0, 0);
+      console.log(test2);
+
+      let test3 = magic_multiply([1,2,3],2);
+      console.log(test3);
+
+      let test4 = magic_multiply(7, 'three');
+      console.log(test4);
+
+      let test5 = magic_multiply("Brendo", 4);
+      console.log(test5);
+    </script>
+  </body>
+</html>

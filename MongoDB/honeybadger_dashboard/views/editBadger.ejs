@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Honey Badgers Don't Care!</title>
+    <link rel="stylesheet" href="/css/new.css">
+  </head>
+  <body>
+    <fieldset>
+      <legend>Edit <%= honeyBadger[0].name %>!</legend>
+      <form action="/honeybadgers/<%=honeyBadger[0]._id%>" method='post'>
+        <div><label for="">Name:</label><input type="text" name='name' value='<%=honeyBadger[0].name %>'></div>
+        <div><label for="">Dig Speed:</label><input type="text" name='digSpeed' value='<%=honeyBadger[0].dig_speed %>'></div>
+        <div><label for="">Anger Level:</label><input type="text" name='angerLevel' value='<%=honeyBadger[0].anger_level %>'></div>
+        <div><label for="">Offspring:</label><input type="text" name='offspring' value='<%=honeyBadger[0].offspring %>'></div>
+        <div><label for="">Cares Given:</label><input type="text" name='cares' value='<%=honeyBadger[0].cares_given %>'></div>
+        <button>Edit Badger!</button>
+      </form>
+    </fieldset>
+    <ul>
+      <% for (const error of errors) { %>
+        <li><%= error %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

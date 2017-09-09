@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Honey Badgers Don't Care!</title>
+  </head>
+  <body>
+    <h1>Honey Badgers!</h1>
+    <ol>
+      <% for (const hb of honeyBadgers) { %>
+        <li><a href="/honeybadgers/<%= hb.id %>" style="display: inline-block; margin-right: 10px;"><h3><%= hb.name %></h3></a><a href="/honeybadgers/edit/<%= hb.id %>" style="display: inline-block; vertical-align: middle; margin-right: 10px;">Edit</a><a href="/honeybadgers/destroy/<%=hb.id%>" style="display: inline-block; vertical-align: middle;">Destroy</a></li>
+      <% } %>
+    </ol>
+  </body>
+</html>

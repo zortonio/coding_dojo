@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Math</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function zero_negativity(input){
+        let valid = true;
+        for (let i = 0; i < input.length; i++){
+          if (input[i]<0){
+            valid = false;
+          }
+        }
+        return valid;
+      }
+
+      function is_even(input){
+        let valid = true;
+        if (input % 2 !== 0){
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      function how_many_even(input){
+        let count = 0;
+        for (let i=0; i < input.length; i++){
+          if (is_even(input[i])) {
+            count = count + 1;
+          }
+        }
+        return count;
+      }
+
+      function create_dummy_array(n){
+        let result = [];
+        while (n > 0){
+          result.push(Math.round(Math.random()*9))
+          n = n - 1;
+        }
+        return result;
+      }
+
+      function random_choice(input){
+        return input[Math.floor(Math.random()*input.length)]
+      }
+    </script>
+  </body>
+</html>

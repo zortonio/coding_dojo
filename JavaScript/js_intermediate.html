@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Intermediate</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Part 1
+      function starString(n){
+        let result = "";
+        while (n > 0){
+          result = result + "*";
+          n = n - 1;
+        }
+        return result;
+      }
+
+      // Part 2
+      function draw_stars(input){
+        for(let i=0; i < input.length; i++){
+          console.log(starString(input[i]))
+        }
+      }
+
+      draw_stars([4,6,1,3,5,7,25])
+
+      // Part 3
+      function starString(n){
+        let result = "";
+        if(typeof n === 'string'){
+          for(let i = 0; i < n.length; i ++){
+            result = result + n.toLowerCase().charAt(0);
+          }
+        } else{
+          while(n > 0 ){
+            result = result + "*";
+            n = n - 1;
+          }
+        }
+        return result
+      }
+
+      function draw_stars(input){
+        for(let i=0; i < input.length; i++){
+          console.log(starString(input[i]))
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+form{
+  width: 600px;
+  border: solid black 1px;
+}
+#labels{
+  display: inline-block;
+  margin: 20px;
+}
+#values{
+  display: inline-block;
+}
+#labels label, #values input, #values select{
+  display: block;
+}
+#cmtLabel{
+  display: block;
+  margin-left: 20px;
+}
+textarea{
+  margin: 10px 20px;
+}
+#submit{
+  margin: 10px 20px;
+}

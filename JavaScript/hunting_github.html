@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hunting Github</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        let button = document.getElementById('displayButton');
+        button.addEventListener('click', doThis);
+
+        function doThis(){
+          $.get('https://api.github.com/users/zortonio', displayName)
+          function displayName(data){
+            $('body').append('<div>'+data.name+'</div>');
+          }
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <button id='displayButton'>Get Name</button>
+  </body>
+</html>

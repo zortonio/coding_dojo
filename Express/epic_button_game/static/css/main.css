@@ -1,0 +1,27 @@
+h1{
+  width: 50%;
+  margin: 20px 25%;
+  text-align: center;
+}
+#main_block{
+  width: 50%;
+  height: 300px;
+  margin: 20px 25%;
+  text-align: center;
+}
+#epic_button{
+  width: 90%;
+  height: 70%;
+  font-size: 2em;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+#reset_button{
+  float: right;
+  margin-right: 25%;
+  width: 10%;
+}
+#count{
+  display: inline-block;
+}

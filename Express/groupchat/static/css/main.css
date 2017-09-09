@@ -1,0 +1,26 @@
+h1{
+  margin: 20px 20%;
+}
+#conversations{
+  margin: 20px 20%;
+  border: solid 1px black;
+  height: 600px;
+  width: 60%;
+}
+#message_form{
+  margin: 0 20%;
+}
+#msg{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+#sendBtn{
+  width: 100px;
+  float: right;
+  display: block;
+  margin: 10px 0;
+}
+.msg_log{
+  margin: 1px 5px;
+}
