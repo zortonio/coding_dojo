@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">{{ title }}</h1>
+  <div id="buttons">
+    <button (click)='onClick("PST")' name="PST" [ngClass]='{"yellow": selected_id==="PST"}'>PST</button>
+    <button (click)='onClick("MST")' name="MST" [ngClass]='{"yellow": selected_id==="MST"}'>MST</button>
+    <button (click)='onClick("CST")' name="CST" [ngClass]='{"yellow": selected_id==="CST"}'>CST</button>
+    <button (click)='onClick("EST")' name="EST" [ngClass]='{"yellow": selected_id==="EST"}'>EST</button>
+    <button (click)='onClick("Clear")' name="Clear">Clear</button>
+  </div>
+  <h3>{{date | date:'short'}}</h3>
+</body>
+</html>
+
