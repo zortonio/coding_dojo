@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <div *ngIf='message'>
+    <p>{{message}}</p>
+  </div>
+  <form #formData='ngForm' (submit)='onSubmit()' name='formData'>
+    <fieldset>
+      <legend>Account Information</legend>
+      <div>
+        <label for="">*First Name:</label>
+        <input 
+          type="text"
+          name='firstName' 
+          class='textInputs'
+          required
+          minlength="2"
+          maxlength="20" 
+          [(ngModel)]='user.firstName'
+          #firstName='ngModel'
+          />
+          <div *ngIf='!firstName.valid' class='errors'>First name is required</div>
+      </div>
+      <div>
+        <label for="">*Last Name:</label>
+        <input 
+          type="text"
+          name='lastName'
+          class='textInputs'
+          required
+          minlength="2"
+          maxlength="20"
+          [(ngModel)]='user.lastName'
+          #lastName='ngModel'
+        />
+        <div *ngIf='!lastName.valid' class='errors'>Last name is required</div>
+      </div>
+      <div>
+        <label for="">*Email:</label>
+        <input
+        type="text"
+        name='email'
+        class='textInputs'
+        required
+        minlength="1"
+        maxlength="30"
+        [(ngModel)]='user.email'
+        #email='ngModel'
+        />
+        <div *ngIf='!email.valid' class='errors'>Email must be valid</div>
+      </div>
+      <div>
+        <label for="">*Password:</label>
+        <input
+        type="password"
+        name='password'
+        class='textInputs'
+        required
+        minlength="7"
+        maxlength="20"
+        [(ngModel)]='user.password'
+        #password='ngModel'
+        />
+        <div *ngIf='!password.valid' class='errors'>Password must be at least 6 characters long</div>
+      </div>
+      <div>
+        <label for="">*Password Confirmation:</label>
+        <input
+        type="password"
+        name='pwConfirm'
+        class='textInputs' 
+        required
+        pattern="{{user.password}}"
+        [(ngModel)]='user.pwConfirm'
+        #pwConfirm='ngModel'
+        />
+        <div *ngIf='!pwConfirm.valid' class='errors'>Passwords must match</div>
+      </div>
+      <div>
+        <label for="">*Street Address:</label>
+        <input
+          type="text"
+          name='address'
+          class='textInputs'
+          required
+          [(ngModel)]='user.address'
+          #address='ngModel'
+        />
+        <div *ngIf='!address.valid' class='errors'>Street address is required</div>
+      </div>
+      <div>
+        <label for="">Unit/Apt #:</label>
+        <input
+          type="text"
+          name='unit'
+          class='textInputs'
+          [(ngModel)]='user.unit'
+          #unit='ngModel'
+        />
+      </div>
+      <div>
+        <label for="">*City:</label>
+        <input
+          type="text"
+          name='city'
+          class='textInputs'
+          required
+          [(ngModel)]='user.city'
+          #city='ngModel'
+        />
+        <div *ngIf='!city.valid' class='errors'>City is required</div>
+      </div>
+      <div>
+        <label for="">*State:</label>
+        <select
+          name="state"
+          class='textInputs'
+          required
+          [(ngModel)]='user.state'
+          #state='ngModel'
+        >
+          <option *ngFor='let state of states' value="{{state}}">{{state}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="">"I'm feeling lucky":</label>
+          <div class='textInputs'>
+            Yes <input type="radio" name="lucky" [(ngModel)]='user.lucky' value='true'>
+            No <input type="radio" name="lucky" [(ngModel)]='user.lucky' value='false'>
+          </div>
+      </div>
+    </fieldset>
+    <input type="submit" value='Submit' id='submit' [disabled]='!formData.valid'>
+  </form>
+</body>
+</html>
+

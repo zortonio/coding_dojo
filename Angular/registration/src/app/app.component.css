@@ -1,0 +1,24 @@
+#submit {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+form div label{
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+}
+.textInputs{
+    display: inline-block;
+    width: 30%;
+    margin: 2.5px;
+}
+#divLast{
+    display: inline-block;
+}
+.errors{
+    display: inline-block;
+    color: red;
+}
