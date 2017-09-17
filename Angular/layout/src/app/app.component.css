@@ -1,0 +1,9 @@
+app-nav{
+    display: inline-block;
+    width: 20%;
+}
+app-main{
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}

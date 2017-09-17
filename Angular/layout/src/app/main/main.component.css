@@ -1,0 +1,11 @@
+#container{
+    border: 1px solid black;
+    margin: 20px 0 0 10px;
+    height: 600px;
+}
+div p{
+    margin: 0;
+}
+#paragraph{
+    margin: 10px;
+}
