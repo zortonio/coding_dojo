@@ -1,0 +1,7 @@
+<fieldset disabled="disabled">
+  <legend>SuperSaiyanComponent</legend>
+  <h3>Power Level: {{powerLevel}}</h3>
+  <h4 *ngIf='powerLevel > 9000 && powerLevel <= 20000'>Over 9000!</h4>
+  <h4 *ngIf='powerLevel > 20000 && powerLevel < 50000'>Superlative!</h4>
+  <h4 *ngIf='powerLevel === 50000'>The One!</h4>
+</fieldset>

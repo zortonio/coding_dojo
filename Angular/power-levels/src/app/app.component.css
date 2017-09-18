@@ -1,0 +1,14 @@
+body{
+    height: 100%;
+}
+fieldset{
+    display: block;
+    height: 100%;
+}
+app-human, app-saiyan, app-super-saiyan, app-super-saiyan-two, app-super-saiyan-three, app-super-saiyan-four{
+    display: inline-block;
+    width: 24%;
+    margin: 20px 4%;
+    height: 200px;
+    vertical-align: top;
+}
