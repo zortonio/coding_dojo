@@ -1,0 +1,15 @@
+<fieldset>
+  <form name='userForm' #userForm = 'ngForm' (submit)='onSubmit(); userForm.reset()'>
+    <div id="input">
+      <h1>Github Score</h1>
+      <div id='username'>
+        <label>Github Username:</label><input type="text" name='username' required [(ngModel)]='user.username' #username='ngModel' />
+      </div>
+      <input type="submit" id="submit" [disabled]='!username.valid'>
+    </div><div class='result' *ngIf='error'>
+      <h1>Username does not exist. Please enter a valid username and try again.</h1>
+    </div><div class='result' *ngIf='!error'>
+      <h1>Github Score: {{score}}</h1>
+    </div>
+  </form>
+</fieldset>
