@@ -1,0 +1,8 @@
+<div *ngIf='quotes'>
+  <div *ngFor='let quote of quotes'>
+    <div *ngIf='quote != null'>
+      <p>{{quote.text}}</p>
+      <p>-{{quote.author}}</p>
+    </div>
+  </div>
+</div>

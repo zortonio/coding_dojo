@@ -1,0 +1,31 @@
+#input{
+    display: inline-block;
+    width: 50%;
+}
+#text{
+    width: 100%;
+    margin: 5px;
+}
+#author{
+    margin: 10px 0 10px 50%;
+    width: 50%;
+}
+#author label{
+    display: inline-block;
+    width: 10%;
+}
+#author input{
+    display: inline-block;
+    width: 87%;
+    margin-left: 5px;
+}
+#submit{
+    display: block;
+    margin: 10px 0 10px 90%;
+}
+#errors{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    color: red;
+}
