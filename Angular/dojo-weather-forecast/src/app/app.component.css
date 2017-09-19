@@ -1,0 +1,11 @@
+#mainHeader{
+    display: block;
+    text-align: center;
+    font-size: 5em;
+    margin: 0 auto;
+}
+#links{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}

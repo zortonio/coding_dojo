@@ -1,0 +1,11 @@
+<fieldset>
+  <span>San Jose, CA</span>
+  <div id="stats" *ngIf='weather'>
+    <h3>Humidity: {{weather.main.humidity}}</h3>
+    <h3>Temperature (Average): {{weather.main.temp}}</h3>
+    <h3>Temperature (Max): {{weather.main.temp_max}}</h3>
+    <h3>Temperature (Min): {{weather.main.temp_min}}</h3>
+    <h3>Status: {{weather.weather[0].description}}</h3>
+  </div>
+  <img src="https://cityhub.movoto.com/1465380325589_San-Jose-f1.jpg" alt="Downtown San Jose">
+</fieldset>

@@ -1,0 +1,11 @@
+<fieldset>
+  <span>Seattle, WA</span>
+  <div id="stats" *ngIf='weather'>
+    <h3>Humidity: {{weather.main.humidity}}</h3>
+    <h3>Temperature (Average): {{weather.main.temp}}</h3>
+    <h3>Temperature (Max): {{weather.main.temp_max}}</h3>
+    <h3>Temperature (Min): {{weather.main.temp_min}}</h3>
+    <h3>Status: {{weather.weather[0].description}}</h3>
+  </div>
+  <img src="https://images.pexels.com/photos/37350/space-needle-seattle-washington-cityscape.jpg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="Seattle Skyline">
+</fieldset>
