@@ -1,0 +1,13 @@
+<form name="productForm" #productForm='ngForm' (submit)='onSubmit()'>
+  <h1>Create a new Product</h1>
+  <div>
+    <label for="">Title</label><input type="text" name="title" required [(ngModel)]='product.title' #title='ngModel' minlength="4">
+  </div>
+  <div>
+    <label for="">Price</label><input type="text" name="price" required [(ngModel)]='product.price' #price='ngModel'>
+  </div>
+  <div>
+    <label for="">Image Url</label><input type="text" name="url" [(ngModel)]='product.url' #url='ngModel'>
+  </div>
+  <input type="submit" name="submit" value="Create" id="submit" [disabled]='!productForm.valid'>
+</form>

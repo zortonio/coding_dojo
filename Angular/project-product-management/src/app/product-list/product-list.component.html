@@ -1,0 +1,10 @@
+<h1>Products List</h1>
+<fieldset *ngFor='let p of products'>
+  <div class="img-container">
+    <img src="{{p.url}}" alt="">
+  </div>
+  <h2>{{p.title}}</h2>
+  <h2>{{p.price}}</h2>
+  <a [routerLink]="['edit',products.indexOf(p)]"><button>Edit</button></a>
+  <a><button (click)='deleteProduct(products.indexOf(p))'>Delete</button></a>
+</fieldset>
