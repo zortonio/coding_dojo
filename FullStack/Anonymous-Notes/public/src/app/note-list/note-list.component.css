@@ -1,0 +1,11 @@
+fieldset{
+    height: 600px;
+    overflow: scroll;
+}
+.note{
+    height: 75px;
+    margin: 5px auto;
+}
+.time{
+    text-align: right;
+}

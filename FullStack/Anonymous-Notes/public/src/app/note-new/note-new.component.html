@@ -1,0 +1,5 @@
+<fieldset>
+  <form name='noteForm' #noteForm='ngForm' (submit)='onSubmit(); noteForm.reset()'>
+    <label>Note:</label><input type="text" name='text' id='text' required minlength="5" [(ngModel)]='note.text'/><button name="submit" id="submit" [disabled]='!noteForm.valid'>Submit</button>
+  </form>
+</fieldset>

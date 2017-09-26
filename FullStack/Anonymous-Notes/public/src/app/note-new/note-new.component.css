@@ -1,0 +1,15 @@
+form label {
+    font-size: 1.5em;
+    margin: 5px 10px;
+}
+#text{
+    font-size: 1.5em;
+    width: 82%;
+    margin: 5px;
+}
+#submit{
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 5px 10px;
+    float: right;
+}

@@ -1,0 +1,6 @@
+<fieldset *ngIf='notes'>
+  <fieldset *ngFor='let note of notes' class='note'>
+      <div class='time'>{{note.createdAt}}</div>
+      <p class='text'>{{note.text}}</p>
+  </fieldset>
+</fieldset>
