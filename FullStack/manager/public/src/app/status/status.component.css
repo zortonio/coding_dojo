@@ -1,0 +1,10 @@
+a, div{
+    display: inline-block;
+    margin: 10px;
+    vertical-align: middle;
+}
+div{
+    width: 1px;
+    border-left: 3px solid black;
+    height: 50px;
+}

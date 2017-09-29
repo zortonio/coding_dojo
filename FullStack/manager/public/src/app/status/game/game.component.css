@@ -1,0 +1,24 @@
+table{
+    width: 100%;
+    text-align: left;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th:first-of-type{
+    width: 30%;
+}
+button{
+    width: 30%;
+    margin: 0 1%;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}

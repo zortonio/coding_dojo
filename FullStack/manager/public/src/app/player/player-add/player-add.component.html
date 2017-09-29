@@ -1,0 +1,13 @@
+<fieldset>
+  <form name='playerForm' #playerForm='ngForm' (submit)='onSubmit(); playerForm.reset()'>
+    <h2>Add Player</h2>
+    <div>
+      <label for="">Player Name:</label><input type="text" name='name' required minlength="2" [(ngModel)]='player.name' #name='ngModel'>
+    </div>
+    <div *ngIf='!name.valid' id='error'>*Name must be at least 2 characters in length</div>
+    <div>
+      <label for="">Preferred Position:</label><input type="text" name='position' [(ngModel)]='player.position' #position='ngModel'>
+    </div>
+    <button [disabled]='!playerForm.valid'>Add</button>
+  </form>
+</fieldset>
