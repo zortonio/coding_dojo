@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+div label{
+    display: inline-block;
+    width: 25%;
+    font-size: 1.2em;
+}
+div input{
+    display: inline-block;
+    width: 73%;
+    font-size: 1em;
+}
+button{
+    width: 98%;
+    margin: 20px 1% 10px 1%;
+    font-size: 1.5em;
+    background-color: blue;
+    color: white;
+}
+.selectedPlayer{
+    text-align: center;
+}
+.player1Img{
+    height: 300px;
+}
+#error{
+    color: red;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center; 
+}

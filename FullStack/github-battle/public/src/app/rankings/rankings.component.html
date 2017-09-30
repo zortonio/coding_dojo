@@ -1,0 +1,8 @@
+<h1>Rankings</h1>
+<fieldset>
+  <div *ngFor='let player of players' class='player'>
+    <h1>{{players.indexOf(player) + 1}}</h1>
+    <img src="{{player.avatarURL}}" alt="Player Avatar">
+    <h2>Score: {{player.score}}</h2>
+  </div>
+</fieldset>

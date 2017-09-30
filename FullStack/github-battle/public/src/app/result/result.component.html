@@ -1,0 +1,13 @@
+<div id="results">
+  <h1>1st Place</h1>
+  <h3>{{winner.name}} (Score: {{winner.score}})</h3>
+  <h1>2nd Place</h1>
+  <h3>{{loser.name}} (Score: {{loser.score}})</h3>
+</div><div id='winner'>
+  <img src="{{winner.avatar_url}}" alt="Winner's picture">
+  <h3>{{winner.name}}</h3>
+</div>
+<div id='reset'>
+  <button (click)='reset()'>Reset</button>
+</div>
+

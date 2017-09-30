@@ -1,0 +1,14 @@
+<fieldset id="player1">
+  <form *ngIf='!user.login' action="" name='userForm' #userForm='ngForm' (submit)='onSubmit(); userForm.reset()'>
+    <h1>Player 1</h1>
+    <div class="inputs">
+      <label for="">Github Username:</label><input type="text" name='name' required [(ngModel)]='user.name' #name='ngModel'>
+    </div>
+    <p *ngIf='error' id="error">Github Username does not exist, try again.</p>
+    <button [disabled]='!name.valid'>Get User</button>
+  </form>
+  <div *ngIf='user.login' class='selectedPlayer'>
+    <img src="{{user.avatar_url}}" alt="Player 1 Picture" class='player1Img'>
+    <h2>{{user.name}}</h2>
+  </div>
+</fieldset>

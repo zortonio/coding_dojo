@@ -1,0 +1,11 @@
+.player{
+    margin: 10px 0;
+}
+.player h1, .player img, .player h2{
+    display: inline-block;
+    vertical-align: top;
+}
+.player img{
+    height: 300px;
+    margin: 0 20px;
+}

@@ -1,0 +1,17 @@
+app-player1, app-player2{
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+}
+app-player1{
+    margin-right: 10px;
+}
+app-player2{
+    margin-left: 10px;
+}
+button{
+    width: 100%;
+    font-size: 2em;
+    margin-top: 20px;
+    background-color: orange;
+}
