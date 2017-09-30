@@ -11,7 +11,7 @@ export class UserService {
   constructor(private _http: Http) { }
 
   getUser(user, callback){
-    this._http.get('https://api.github.com/users/'+user.name+'?access_token=f276c44cc4557160fc964281756bcd4e11fe29b4').subscribe(
+    this._http.get('https://api.github.com/users/'+user.name).subscribe(
       (response) => {
         callback(response.json(),null);
       },
